@@ -1,0 +1,384 @@
+@import "reset"
+@import "vars"
+
+%container
+  width: 1170px
+  margin: 0 auto
+
+//head
+.header
+  height: 750px
+  background-image: url('../img/bg_head.png')
+  background-size: cover
+
+  &_container
+    @extend %container
+
+    .head
+      margin: 0 auto
+      height: 100px
+      display: flex
+      justify-content: space-between
+      align-items: center
+      // background-color: #292c47
+      background-image: url('../img/bg_nav.png')
+      background-size: cover
+      position: fixed
+      top: 0
+      width: 1170px
+      z-index: 100
+      &_nav
+        width: 600px
+        height: 100px
+        display: flex
+        justify-content: space-between
+        align-items: center
+        &__item
+          width: 100px
+          height: 60px
+          line-height: 60px
+          text-align: center
+          >a
+            display: inline-block
+            color: #ccccd3
+            font-size: 13px
+            font-weight: 700
+            font-family: $main_font
+            text-transform: uppercase
+          >a:hover
+            color: $main_color
+.section_h
+  display: flex
+  justify-content: center
+  align-items: center
+  height: 650px
+  &_content
+    text-align: center
+    height: 340px
+    width: 970px
+    >h1
+      font-size: 65px
+      line-height: 1.09
+      font-family: $second_font
+      font-weight: 700
+      text-transform: uppercase
+      color: $main_color
+    >p
+      padding-top: 43px
+      padding-bottom: 82px
+      font-size: 22px
+      line-height: 1.5
+      font-family: $main_font
+      font-weight: 700
+      color: $main_color
+    &__btn
+      height: 45px
+      width: 200px
+      background-color: $light_color
+      line-height: 45px
+      margin: 0 auto
+      border-radius: 2px
+      box-sizing: border-box
+      >a
+        display: inline-block
+        height: 100%
+        width: 100%
+        font-size: 13px
+        font-family: $main_font
+        text-transform: uppercase
+        font-weight: 600
+        color: $main_color
+      >a:hover
+        background-color: #e52e2e
+        border-radius: 2px
+        box-sizing: border-box
+
+//feature
+.feature
+  @extend %container
+  margin: 120px auto
+  box-sizing: border-box
+  text-align: center
+  &_block
+    height: 190px
+    width: 1170px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-top: 80px
+    &__item
+      height: 190px
+      width: 360px
+      >h2
+        margin-top: 33px
+        font-size: 14px
+        font-family: $main_font
+        text-transform: uppercase
+        font-weight: 700
+      >p
+        margin-top: 27px
+        font-size: 14px
+        line-height: 1.5
+        font-family: $main_font
+
+//work
+.work
+  height: 500px
+  margin: 0 auto
+  max-width: 1920px
+
+  &_line
+
+    height: 250px
+    display: flex
+    justify-content: center
+    align-items: center
+    margin: 0 auto
+    &__info
+      display: flex
+      align-items: center
+      justify-content: center
+      background-color: $light_color
+      position: absolute
+      bottom: 0
+      left: 0
+      height: 0
+      width: 100%
+      z-index: 15
+      opacity: 0
+      transition: all .5s
+      color: #fff
+      text-align: center
+      >a
+        position: absolute
+        display: inline-block
+        height: 100%
+        width: 100%
+      >h3
+        font-size: 14px
+        font-weight: 700
+        font-family: $main_font
+        text-transform: uppercase
+        line-height: 20px
+        >p
+          font-size: 14px
+          font-weight: 400
+          font-family: $main_font
+          text-transform: capitalize
+
+    &__item:hover .work_line__info
+      height: 250px
+      opacity: .9
+      // transform: scale(1)
+    &__item
+      position: relative
+      top: 0
+      left: 0
+      height: 250px
+      width: 475px
+      overflow: hidden
+      margin: 0 auto
+      >img
+        width: 100%
+        height: 100%
+
+//team
+.team
+  height: 780px
+  display: flex
+  justify-content: space-between
+  align-items: center
+  &_container
+    @extend %container
+    display: flex
+    justify-content: space-between
+    &__item
+      height: 580px
+      width: 270px
+      h4
+        font-size: 22px
+        font-family: $main_font
+        font-weight: 700
+        padding-top: 30px
+        padding-bottom: 15px
+      p
+        font-size: 14px
+        font-weight: 400
+        font-family: $main_font
+        line-height: 1.5
+        padding-bottom: 30px
+      p.mod
+        font-size: 13px
+        color: $light_color
+      a
+        display: inline-block
+        line-height: 40px
+        text-align: center
+        width: 40px
+        height: 40px
+        box-sizing: border-box
+        border: 1px solid #e8ecee
+        border-radius: 2px
+      >a:hover
+        background-color: $light_color
+        border: 1px solid $light_color
+
+//clients
+.clients
+  height: 500px
+  display: flex
+  &_foto
+    position: relative
+    width: 50%
+    height: 500px
+    overflow: hidden
+    // transform: translate(-200px)
+    //Изображение КРИВОЕ!!!!!!!!
+    &_1
+      position: absolute
+      right: 0
+      top: 0
+  &_comment
+    overflow: hidden
+    box-sizing: border-box
+    padding-top: 110px
+    padding-left: 85px
+    padding-right: 85px
+    width: 50%
+    max-width: 950px
+    height: 500px
+    background-color: #53354a
+
+    &__slider
+      margin: 0 auto
+      width: 100px
+      height: 12px
+      display: flex
+      justify-content: space-around
+    h5
+      font-family: $beauty-font
+      font-size: 36px
+      line-height: 1.167
+      color: $main_color
+      padding-bottom: 40px
+    p
+      font-family: $main_font
+      font-size: 13px
+      text-transform: uppercase
+      color: $main_color
+      padding-bottom: 65px
+
+//download
+.download
+  height: 340px
+
+  padding: 100px 0
+  box-sizing: border-box
+  text-align: center
+  h6
+    font-size: 28px
+    font-family: $main_font
+    font-weight: 300
+
+  p
+    font-size: 13px
+    font-family: $main_font
+    font-weight: 700
+    text-transform: uppercase
+    padding-bottom: 40px
+    padding-top: 15px
+  &__btn
+    margin: 0 auto
+    height: 45px
+    width: 280px
+    background-color: $light_color
+    border-radius: 2px
+    box-sizing: border-box
+    >a
+      display: inline-block
+      text-align: center
+      height: 100%
+      width: 100%
+      color: $main_color
+      line-height: 45px
+      text-transform: uppercase
+      font-family: $main_font
+      font-size: 13px
+      font-weight: 600
+    >a:hover
+      height: 45px
+      background-color: #e52e2e
+      border-radius: 2px
+      box-sizing: border-box
+
+//footer
+.footer
+  height: 350px
+  background-color: #3a3e64
+  width: 100%
+  &_container
+    @extend %container
+    height: 250px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    &__social
+      padding-top: 22px
+      a
+        display: inline-block
+        line-height: 40px
+        text-align: center
+        width: 40px
+        height: 40px
+        box-sizing: border-box
+        border: 1px solid #fff
+        border-radius: 2px
+      a:hover
+        background-color: $light_color
+        border: 1px solid $light_color
+
+    &__item
+      text-align: center
+      height: 90px
+      width: 370px
+      >span
+        display: inline-block
+        color: $main_color
+        font-size: 14px
+        font-family: $main_font
+        font-weight: 700
+        text-transform: uppercase
+        box-sizing: border-box
+
+      >p
+        font-size: 14px
+        font-family: $main_font
+        font-weight: 400
+        padding-top: 22px
+        color: #757893
+  &_info
+    height: 100px
+    background-color: #313454
+    width: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+    color: $main_color
+    text-align: center
+    >p
+      font-size: 14px
+      font-family: $main_font
+      font-weight: 400
+      color: #808080
+      line-height: 1.6
+      >span
+        color: $main_color
+      .heart
+        font-size: 14px
+        font-family: $main_font
+        font-weight: 400
+        color: $light_color
+      >a
+        color: $main_color
+      >a:hover
+        color: $light_color
